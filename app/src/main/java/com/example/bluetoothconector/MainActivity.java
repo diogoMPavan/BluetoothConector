@@ -31,14 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner spinDetected = null;
     Button btnPair = null;
-    Spinner spinPaired = null;
     EditText txtMsg = null;
     Button btnSend = null;
     BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     List<String> lstDevices = new ArrayList<>();
     ArrayAdapter<String> adapter;
-    private static final int DISCOVERY_INTERVAL_MS = 10000;
-    private Handler handler = new Handler();
     Button btnFind = null;
     Button btnConnect = null;
     ConnectionThread connectionThread;
@@ -168,21 +165,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
-
-    /*private Runnable discoveryRunnable = new Runnable() {
-        @Override
-        public void run() {
-            if (ActivityCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
-                return;
-            }
-            if (bluetoothAdapter.isDiscovering()) {
-                bluetoothAdapter.cancelDiscovery();
-            }
-            bluetoothAdapter.startDiscovery();
-            Toast.makeText(MainActivity.this, "Scanning", Toast.LENGTH_SHORT).show();
-            handler.postDelayed(this, DISCOVERY_INTERVAL_MS);
-        }
-    };*/
 
 }

@@ -17,12 +17,6 @@
         android:text="Parear"
         android:layout_marginTop="8dp"/>
 
-    <Spinner
-        android:id="@+id/spinnerPaired"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp" />
-
     <Button
         android:id="@+id/buttonConnect"
         android:layout_width="match_parent"
